@@ -4,7 +4,8 @@
   "info": {
     "singularName": "language",
     "pluralName": "languages",
-    "displayName": "language"
+    "displayName": "language",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,13 +13,16 @@
   "pluginOptions": {},
   "attributes": {
     "label": {
-      "type": "string"
+      "type": "string",
+      "pluginOptions": {}
     },
     "value": {
-      "type": "string"
+      "type": "string",
+      "pluginOptions": {}
     },
     "order": {
-      "type": "integer"
+      "type": "integer",
+      "pluginOptions": {}
     }
   }
 }
