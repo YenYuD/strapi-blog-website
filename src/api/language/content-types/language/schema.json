@@ -1,5 +1,5 @@
 {
-  "kind": "singleType",
+  "kind": "collectionType",
   "collectionName": "languages",
   "info": {
     "singularName": "language",
@@ -16,6 +16,9 @@
     },
     "value": {
       "type": "string"
+    },
+    "order": {
+      "type": "integer"
     }
   }
 }
