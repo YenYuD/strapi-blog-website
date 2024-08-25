@@ -946,6 +946,7 @@ export interface ApiLanguageLanguage extends Schema.CollectionType {
     singularName: 'language';
     pluralName: 'languages';
     displayName: 'language';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -978,14 +979,35 @@ export interface ApiSidebarSidebar extends Schema.CollectionType {
     singularName: 'sidebar';
     pluralName: 'sidebars';
     displayName: 'sidebar';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
-    title: Attribute.String;
-    link: Attribute.String;
-    order: Attribute.Integer;
+    title: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    link: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    order: Attribute.Integer &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1001,6 +1023,12 @@ export interface ApiSidebarSidebar extends Schema.CollectionType {
       'admin::user'
     > &
       Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::sidebar.sidebar',
+      'oneToMany',
+      'api::sidebar.sidebar'
+    >;
+    locale: Attribute.String;
   };
 }
 
