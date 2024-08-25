@@ -940,7 +940,7 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
   };
 }
 
-export interface ApiLanguageLanguage extends Schema.SingleType {
+export interface ApiLanguageLanguage extends Schema.CollectionType {
   collectionName: 'languages';
   info: {
     singularName: 'language';
@@ -953,6 +953,7 @@ export interface ApiLanguageLanguage extends Schema.SingleType {
   attributes: {
     label: Attribute.String;
     value: Attribute.String;
+    order: Attribute.Integer;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
