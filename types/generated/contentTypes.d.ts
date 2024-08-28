@@ -905,6 +905,11 @@ export interface ApiArticleArticle extends Schema.CollectionType {
           localized: true;
         };
       }>;
+    sidebars: Attribute.Relation<
+      'api::article.article',
+      'manyToMany',
+      'api::sidebar.sidebar'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1082,13 +1087,12 @@ export interface ApiSidebarSidebar extends Schema.CollectionType {
           localized: true;
         };
       }>;
-    link: Attribute.String &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    order: Attribute.Integer &
+    articles: Attribute.Relation<
+      'api::sidebar.sidebar',
+      'manyToMany',
+      'api::article.article'
+    >;
+    sub: Attribute.DynamicZone<['sidebar.sub-item']> &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

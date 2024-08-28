@@ -94,6 +94,12 @@
         }
       },
       "type": "boolean"
+    },
+    "sidebars": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::sidebar.sidebar",
+      "mappedBy": "articles"
     }
   }
 }
