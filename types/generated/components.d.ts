@@ -14,6 +14,7 @@ export interface SidebarSub extends Schema.Component {
       'oneToMany',
       'api::article.article'
     >;
+    path: Attribute.String;
   };
 }
 
@@ -32,6 +33,7 @@ export interface SidebarSubItem extends Schema.Component {
       'api::article.article'
     >;
     sub: Attribute.Component<'sidebar.sub', true>;
+    path: Attribute.String;
   };
 }
 
