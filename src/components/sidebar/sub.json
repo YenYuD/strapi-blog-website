@@ -14,6 +14,9 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::article.article"
+    },
+    "path": {
+      "type": "string"
     }
   }
 }
