@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2024-08-29T14:18:45.451Z"
+    "x-generation-date": "2024-08-30T09:07:38.199Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -1687,21 +1687,18 @@
                                                             "path": {
                                                               "type": "string"
                                                             },
-                                                            "categories": {
+                                                            "category": {
                                                               "type": "object",
                                                               "properties": {
                                                                 "data": {
-                                                                  "type": "array",
-                                                                  "items": {
-                                                                    "type": "object",
-                                                                    "properties": {
-                                                                      "id": {
-                                                                        "type": "number"
-                                                                      },
-                                                                      "attributes": {
-                                                                        "type": "object",
-                                                                        "properties": {}
-                                                                      }
+                                                                  "type": "object",
+                                                                  "properties": {
+                                                                    "id": {
+                                                                      "type": "number"
+                                                                    },
+                                                                    "attributes": {
+                                                                      "type": "object",
+                                                                      "properties": {}
                                                                     }
                                                                   }
                                                                 }
@@ -1844,6 +1841,9 @@
                       },
                       "visibility": {
                         "type": "boolean"
+                      },
+                      "path": {
+                        "type": "string"
                       },
                       "createdAt": {
                         "type": "string",
@@ -2221,6 +2221,9 @@
           "visibility": {
             "type": "boolean"
           },
+          "path": {
+            "type": "string"
+          },
           "locale": {
             "type": "string"
           }
@@ -2254,6 +2257,9 @@
               },
               "visibility": {
                 "type": "boolean"
+              },
+              "path": {
+                "type": "string"
               },
               "locale": {
                 "type": "string"
@@ -2440,6 +2446,9 @@
                                     },
                                     "visibility": {
                                       "type": "boolean"
+                                    },
+                                    "path": {
+                                      "type": "string"
                                     },
                                     "createdAt": {
                                       "type": "string",
@@ -3280,21 +3289,18 @@
                                                 "path": {
                                                   "type": "string"
                                                 },
-                                                "categories": {
+                                                "category": {
                                                   "type": "object",
                                                   "properties": {
                                                     "data": {
-                                                      "type": "array",
-                                                      "items": {
-                                                        "type": "object",
-                                                        "properties": {
-                                                          "id": {
-                                                            "type": "number"
-                                                          },
-                                                          "attributes": {
-                                                            "type": "object",
-                                                            "properties": {}
-                                                          }
+                                                      "type": "object",
+                                                      "properties": {
+                                                        "id": {
+                                                          "type": "number"
+                                                        },
+                                                        "attributes": {
+                                                          "type": "object",
+                                                          "properties": {}
                                                         }
                                                       }
                                                     }
@@ -3437,6 +3443,9 @@
           },
           "visibility": {
             "type": "boolean"
+          },
+          "path": {
+            "type": "string"
           },
           "createdAt": {
             "type": "string",
@@ -4667,6 +4676,9 @@
                                     "visibility": {
                                       "type": "boolean"
                                     },
+                                    "path": {
+                                      "type": "string"
+                                    },
                                     "createdAt": {
                                       "type": "string",
                                       "format": "date-time"
@@ -5506,21 +5518,18 @@
                                                 "path": {
                                                   "type": "string"
                                                 },
-                                                "categories": {
+                                                "category": {
                                                   "type": "object",
                                                   "properties": {
                                                     "data": {
-                                                      "type": "array",
-                                                      "items": {
-                                                        "type": "object",
-                                                        "properties": {
-                                                          "id": {
-                                                            "type": "number"
-                                                          },
-                                                          "attributes": {
-                                                            "type": "object",
-                                                            "properties": {}
-                                                          }
+                                                      "type": "object",
+                                                      "properties": {
+                                                        "id": {
+                                                          "type": "number"
+                                                        },
+                                                        "attributes": {
+                                                          "type": "object",
+                                                          "properties": {}
                                                         }
                                                       }
                                                     }
@@ -5830,21 +5839,18 @@
           "path": {
             "type": "string"
           },
-          "categories": {
+          "category": {
             "type": "object",
             "properties": {
               "data": {
-                "type": "array",
-                "items": {
-                  "type": "object",
-                  "properties": {
-                    "id": {
-                      "type": "number"
-                    },
-                    "attributes": {
-                      "type": "object",
-                      "properties": {}
-                    }
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "number"
+                  },
+                  "attributes": {
+                    "type": "object",
+                    "properties": {}
                   }
                 }
               }

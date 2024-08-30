@@ -34,9 +34,9 @@ export interface SidebarSubItem extends Schema.Component {
     >;
     sub: Attribute.Component<'sidebar.sub', true>;
     path: Attribute.String;
-    categories: Attribute.Relation<
+    category: Attribute.Relation<
       'sidebar.sub-item',
-      'oneToMany',
+      'oneToOne',
       'api::category.category'
     >;
   };
