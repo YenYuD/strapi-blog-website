@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2024-08-30T09:07:38.199Z"
+    "x-generation-date": "2024-09-01T15:42:56.512Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -92,7 +92,9 @@
         ],
         "type": "object",
         "properties": {
-          "content": {},
+          "content": {
+            "type": "string"
+          },
           "locale": {
             "type": "string"
           }
@@ -107,7 +109,9 @@
           "data": {
             "type": "object",
             "properties": {
-              "content": {},
+              "content": {
+                "type": "string"
+              },
               "locale": {
                 "type": "string"
               }
@@ -232,7 +236,9 @@
       "About": {
         "type": "object",
         "properties": {
-          "content": {},
+          "content": {
+            "type": "string"
+          },
           "createdAt": {
             "type": "string",
             "format": "date-time"
@@ -3537,7 +3543,9 @@
         ],
         "type": "object",
         "properties": {
-          "content": {},
+          "content": {
+            "type": "string"
+          },
           "locale": {
             "type": "string"
           }
@@ -3552,7 +3560,9 @@
           "data": {
             "type": "object",
             "properties": {
-              "content": {},
+              "content": {
+                "type": "string"
+              },
               "locale": {
                 "type": "string"
               }
@@ -3677,7 +3687,9 @@
       "Home": {
         "type": "object",
         "properties": {
-          "content": {},
+          "content": {
+            "type": "string"
+          },
           "createdAt": {
             "type": "string",
             "format": "date-time"
