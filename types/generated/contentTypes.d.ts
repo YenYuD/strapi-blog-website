@@ -805,7 +805,7 @@ export interface ApiAboutAbout extends Schema.SingleType {
     };
   };
   attributes: {
-    content: Attribute.Blocks &
+    content: Attribute.RichText &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1015,7 +1015,7 @@ export interface ApiHomeHome extends Schema.SingleType {
     };
   };
   attributes: {
-    content: Attribute.Blocks &
+    content: Attribute.RichText &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
