@@ -887,12 +887,6 @@ export interface ApiArticleArticle extends Schema.CollectionType {
           localized: true;
         };
       }>;
-    cover_image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     description: Attribute.String &
       Attribute.SetPluginOptions<{
         i18n: {
@@ -910,6 +904,12 @@ export interface ApiArticleArticle extends Schema.CollectionType {
       'manyToMany',
       'api::sidebar.sidebar'
     >;
+    cover_image_path: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
