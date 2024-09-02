@@ -63,22 +63,6 @@
       },
       "component": "seo-components.meta"
     },
-    "cover_image": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "description": {
       "pluginOptions": {
         "i18n": {
@@ -100,6 +84,14 @@
       "relation": "manyToMany",
       "target": "api::sidebar.sidebar",
       "mappedBy": "articles"
+    },
+    "cover_image_path": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
     }
   }
 }
