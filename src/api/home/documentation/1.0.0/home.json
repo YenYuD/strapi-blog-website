@@ -1,5 +1,5 @@
 {
-  "/sidebars": {
+  "/home": {
     "get": {
       "responses": {
         "200": {
@@ -7,7 +7,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/SidebarListResponse"
+                "$ref": "#/components/schemas/HomeResponse"
               }
             }
           }
@@ -64,7 +64,7 @@
         }
       },
       "tags": [
-        "Sidebar"
+        "Home"
       ],
       "parameters": [
         {
@@ -170,168 +170,7 @@
           }
         }
       ],
-      "operationId": "get/sidebars"
-    },
-    "post": {
-      "responses": {
-        "200": {
-          "description": "OK",
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/SidebarResponse"
-              }
-            }
-          }
-        },
-        "400": {
-          "description": "Bad Request",
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Error"
-              }
-            }
-          }
-        },
-        "401": {
-          "description": "Unauthorized",
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Error"
-              }
-            }
-          }
-        },
-        "403": {
-          "description": "Forbidden",
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Error"
-              }
-            }
-          }
-        },
-        "404": {
-          "description": "Not Found",
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Error"
-              }
-            }
-          }
-        },
-        "500": {
-          "description": "Internal Server Error",
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Error"
-              }
-            }
-          }
-        }
-      },
-      "tags": [
-        "Sidebar"
-      ],
-      "parameters": [],
-      "operationId": "post/sidebars",
-      "requestBody": {
-        "required": true,
-        "content": {
-          "application/json": {
-            "schema": {
-              "$ref": "#/components/schemas/SidebarRequest"
-            }
-          }
-        }
-      }
-    }
-  },
-  "/sidebars/{id}": {
-    "get": {
-      "responses": {
-        "200": {
-          "description": "OK",
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/SidebarResponse"
-              }
-            }
-          }
-        },
-        "400": {
-          "description": "Bad Request",
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Error"
-              }
-            }
-          }
-        },
-        "401": {
-          "description": "Unauthorized",
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Error"
-              }
-            }
-          }
-        },
-        "403": {
-          "description": "Forbidden",
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Error"
-              }
-            }
-          }
-        },
-        "404": {
-          "description": "Not Found",
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Error"
-              }
-            }
-          }
-        },
-        "500": {
-          "description": "Internal Server Error",
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Error"
-              }
-            }
-          }
-        }
-      },
-      "tags": [
-        "Sidebar"
-      ],
-      "parameters": [
-        {
-          "name": "id",
-          "in": "path",
-          "description": "",
-          "deprecated": false,
-          "required": true,
-          "schema": {
-            "type": "number"
-          }
-        }
-      ],
-      "operationId": "get/sidebars/{id}"
+      "operationId": "get/home"
     },
     "put": {
       "responses": {
@@ -340,7 +179,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/SidebarResponse"
+                "$ref": "#/components/schemas/HomeResponse"
               }
             }
           }
@@ -397,27 +236,16 @@
         }
       },
       "tags": [
-        "Sidebar"
+        "Home"
       ],
-      "parameters": [
-        {
-          "name": "id",
-          "in": "path",
-          "description": "",
-          "deprecated": false,
-          "required": true,
-          "schema": {
-            "type": "number"
-          }
-        }
-      ],
-      "operationId": "put/sidebars/{id}",
+      "parameters": [],
+      "operationId": "put/home",
       "requestBody": {
         "required": true,
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/SidebarRequest"
+              "$ref": "#/components/schemas/HomeRequest"
             }
           }
         }
@@ -488,24 +316,13 @@
         }
       },
       "tags": [
-        "Sidebar"
+        "Home"
       ],
-      "parameters": [
-        {
-          "name": "id",
-          "in": "path",
-          "description": "",
-          "deprecated": false,
-          "required": true,
-          "schema": {
-            "type": "number"
-          }
-        }
-      ],
-      "operationId": "delete/sidebars/{id}"
+      "parameters": [],
+      "operationId": "delete/home"
     }
   },
-  "/sidebars/{id}/localizations": {
+  "/home/localizations": {
     "post": {
       "responses": {
         "200": {
@@ -513,7 +330,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/SidebarLocalizationResponse"
+                "$ref": "#/components/schemas/HomeLocalizationResponse"
               }
             }
           }
@@ -570,27 +387,16 @@
         }
       },
       "tags": [
-        "Sidebar"
+        "Home"
       ],
-      "parameters": [
-        {
-          "name": "id",
-          "in": "path",
-          "description": "",
-          "deprecated": false,
-          "required": true,
-          "schema": {
-            "type": "number"
-          }
-        }
-      ],
-      "operationId": "post/sidebars/{id}/localizations",
+      "parameters": [],
+      "operationId": "post/home/localizations",
       "requestBody": {
         "required": true,
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/SidebarLocalizationRequest"
+              "$ref": "#/components/schemas/HomeLocalizationRequest"
             }
           }
         }

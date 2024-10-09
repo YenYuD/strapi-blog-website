@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * sidebar controller
+ * about controller
  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::sidebar.sidebar');
+module.exports = createCoreController('api::about.about');

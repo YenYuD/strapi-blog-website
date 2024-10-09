@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_sidebar_subs",
+  "info": {
+    "displayName": "second-sub",
+    "icon": "arrowRight",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "articles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::article.article"
+    },
+    "path": {
+      "type": "string"
+    }
+  }
+}

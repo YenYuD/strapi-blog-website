@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_sidebar_sub_items",
+  "info": {
+    "displayName": "sub-item",
+    "icon": "arrowRight",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "articles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::article.article"
+    },
+    "sub": {
+      "type": "component",
+      "repeatable": true,
+      "component": "sidebar.sub"
+    },
+    "path": {
+      "type": "string"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::category.category"
+    }
+  }
+}

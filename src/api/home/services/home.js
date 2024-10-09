@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * sidebar service
+ * home service
  */
 
 const { createCoreService } = require('@strapi/strapi').factories;
 
-module.exports = createCoreService('api::sidebar.sidebar');
+module.exports = createCoreService('api::home.home');

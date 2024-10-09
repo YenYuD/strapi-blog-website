@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * sidebar router
+ * home router
  */
 
 const { createCoreRouter } = require('@strapi/strapi').factories;
 
-module.exports = createCoreRouter('api::sidebar.sidebar');
+module.exports = createCoreRouter('api::home.home');
