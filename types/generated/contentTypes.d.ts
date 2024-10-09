@@ -859,7 +859,7 @@ export interface ApiArticleArticle extends Schema.CollectionType {
           localized: true;
         };
       }>;
-    publish_at: Attribute.DateTime &
+    publish_at: Attribute.Date &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -899,12 +899,13 @@ export interface ApiArticleArticle extends Schema.CollectionType {
           localized: true;
         };
       }>;
-    sidebars: Attribute.Relation<
-      'api::article.article',
-      'manyToMany',
-      'api::sidebar.sidebar'
-    >;
     cover_image_path: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    slug: Attribute.UID<'api::article.article', 'title'> &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1070,64 +1071,6 @@ export interface ApiLanguageLanguage extends Schema.CollectionType {
   };
 }
 
-export interface ApiSidebarSidebar extends Schema.CollectionType {
-  collectionName: 'sidebars';
-  info: {
-    singularName: 'sidebar';
-    pluralName: 'sidebars';
-    displayName: 'sidebar';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  pluginOptions: {
-    i18n: {
-      localized: true;
-    };
-  };
-  attributes: {
-    title: Attribute.String &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    articles: Attribute.Relation<
-      'api::sidebar.sidebar',
-      'manyToMany',
-      'api::article.article'
-    >;
-    sub: Attribute.DynamicZone<['sidebar.sub-item']> &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::sidebar.sidebar',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::sidebar.sidebar',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    localizations: Attribute.Relation<
-      'api::sidebar.sidebar',
-      'oneToMany',
-      'api::sidebar.sidebar'
-    >;
-    locale: Attribute.String;
-  };
-}
-
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -1151,7 +1094,6 @@ declare module '@strapi/types' {
       'api::category.category': ApiCategoryCategory;
       'api::home.home': ApiHomeHome;
       'api::language.language': ApiLanguageLanguage;
-      'api::sidebar.sidebar': ApiSidebarSidebar;
     }
   }
 }
